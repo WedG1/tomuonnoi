@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải mã nhị phân</title>
+    <style>
+        body { font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; background: #f4f4f9; }
+        .box { display: flex; gap: 8px; margin-top: 10px; }
+        input { padding: 8px 12px; width: 380px; font-family: monospace; border: 1px solid #ccc; border-radius: 4px; }
+        button { padding: 8px 16px; cursor: pointer; background: #007bff; color: white; border: none; border-radius: 4px; }
+        button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+
+    <h2>Giải mã nhị phân dưới</h2>
+    
+    <div class="box">
+        <input type="text" id="binaryInput" value="01110100 11100001 10111011 10011011 00100000 01110100 01101000 11000011 10101101 01100011 01101000 00100000 01101101 01111001" readonly>
+        <button onclick="copyText()">Copy</button>
+    </div>
+
+    <script>
+        function copyText() {
+            const copyText = document.getElementById("binaryInput");
+            copyText.select();
+            navigator.clipboard.writeText(copyText.value);
+            alert("Đã sao chép!");
+        }
+    </script>
+
+</body>
+</html>
